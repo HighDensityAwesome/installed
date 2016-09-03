@@ -16,10 +16,11 @@ fi
 #alias ls='ls -GFh' #list with a little flair ;) 
 
 #TMUX Aliases
-alias lts='tmux list-session' #list all currently active tmux sessions
-alias kts='tmux kill-session -t' #eg 'kt 1'
-alias ltw='tmux list-window' #list tmux active windows
-alias ktw='tmux kill-window -t' #kill tmux window <id>
+alias lt='tmux list-session ' #list all currently active tmux sessions
+alias kt='tmux kill-session -t ' #eg 'kt 1'
+alias lw='tmux list-window ' #list tmux active windows
+alias kw='tmux kill-window -t ' #kill tmux window <id>
+alias s='tmux switch -t '
 alias redshift='/etc/init.d/redshift_onstartup.sh'
 alias v='vim'
 
@@ -34,4 +35,5 @@ vman() {
 }
 
 complete -o default -o nospace -F _man vman #tab completion for SuperMAN pages vim plugin
-export EVENT_NOEPOLL=1
+export CXX=/usr/local/gcc-4.9.4
+export EVENT_NOEPOLL=1 #SlimuxREPLSendLine freeze fix

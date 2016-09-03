@@ -8,21 +8,47 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~Msle0~/\<cxxflags\>
+~MSle0~/epoch
 
 # Last Substitute Search Pattern:
-~MSle0&http
+~MSle0&\%V1
 
 # Last Substitute String:
-$
+$2
 
 # Command Line History (newest to oldest):
-:q
-:a
-:w
-:q;
-:wq
 :q!
+:q
+:w!
+:wq
+:w
+:set paste
+:w sgd_logistic_regression.py
+:"""
+:noh
+:s/\%V1/2
+:s/\%V1/2g
+:gv
+:a
+:b
+:help key-notation
+:help key-notations
+:1
+:colorsheme desert
+:%s//"/home/dan/code/Theano-Tutorials"/g
+:%s///home/dan/code/Theno-Tutorials
+:%s///home/dan/code/Theno-Tutorials/
+:%s///home/dan/code/Theno_Tutorials/g
+:%s//med/g
+:%s///g
+:syntax on
+:syntax off
+:synatx on
+:.,.+1w
+:!sudo vim /etc/init.d/redshift_onstartup.sh
+:!vim /etc/init.d/redshift_onstartup.sh
+:'<,'>!/usr/bin/env bash
+:q;
 :! source .vimrc
 :SlimuxREPLSendLine
 :!tmux list-keys | grep confirm-before
@@ -38,40 +64,46 @@ $
 :e ~/.vimrc
 :remove
 :git
-:w!
 :man:systemctl
 :%s//https/g
 :%s//C/g
-:%s//LOL/g
-:%s//JEFFSUCKS/g
-:%s//lglg/g
-:noh
-:BundleInstall
-:echo has('python')
-:IPython
-:Sex
-:set syn=sh
-:sex
-:Rename scienceassign.sh
-:rename scienceassignment.sh
-:help noremap
-:sp
-:ew
-:'<,'>!#
-:'<,'>
-:! chmod +x %
-:saveas test.sh
-:saveas
-:Rename
-:! chmod +x test.py
-:1
-:macvim gui-macvim
-:macvim-start
 
 # Search String History (newest to oldest):
+?/epoch
+?/epoc
+?/epo
+? \<ax\>
+?/epochs
+?/valid
+? @$
+?/__
+?/1000
+?/Optimis
+?/83
+?/74
+?/w1
+?/max_p
+?/l3a
+?/w
+?/noh
+?/0.01
+? \%V1
+?/1
+?/l1
+?/shift
+?/conv2
+?/leader
+?/alt
+?/theano
+?/media
+?/\/med
+?/media,d1
+?/m
+?/"/m"
+?//m
+?/usr/bin/env bash
 ? \<cxxflags\>
 ??\a
-? @$
 ?/st
 ?/http
 ? \<M\>
@@ -79,7 +111,6 @@ $
 ? \<sudo\>
 ? \<C\>
 ? \<set\>
-?/noh
 ? \<TMUX\>
 ? \<alias\>
 ?/numpy.e
@@ -103,147 +134,141 @@ $
 
 # Registers:
 "0	CHAR	0
-	Theano version 0.8.2
-	theano is installed in /usr/lib/python2.7/site-packages/theano
-	NumPy version 1.11.1
-	NumPy relaxed strides checking option: False
-	NumPy is installed in /usr/lib64/python2.7/site-packages/numpy
-	Python version 2.7.12 (default, Aug  9 2016, 15:48:18) [GCC 6.1.1 20160621 (Red Hat 6.1.1-3)]
-	nose version 1.3.7
+	1
 "1	LINE	0
-	
+	"""
 "2	LINE	0
-	ldflags = -latlas -lf77blas -lgfortran 
+	
 "3	LINE	0
-	
+	"""
 "4	LINE	0
-	#other stuff can go here
+	"""
 "5	LINE	0
-	#other stuff can go here
+	This tutorial introduces the multilayer perceptron using Theano.
 "6	LINE	0
-	set number
-	set background=dark
+	
 "7	LINE	0
-	
+	 A multilayer perceptron is a logistic regressor where
 "8	LINE	0
-	
+	           
 "9	LINE	0
 	
 "l	CHAR	0
 	€kb:q
 ""-	CHAR	0
-	u
+	#
 
 # File marks:
-'0  13  0  ~/.tmux.conf
-'1  1  0  ~/Downloads/gcc-4.9.4/configure.ac
-'2  25  23  ~/.theanorc
-'3  10  6  ~/
-'4  11  14  ~/code/machinelearning/nosetests_theano.output.txt
-'5  1  0  ~/code/machinelearning/nosetests_theano.output.txt
-'6  3  12  ~/code/machinelearning/nosetests.py
-'7  1  17  ~/.theanorc
-'8  7  0  ~/.vimrc
-'9  7  0  ~/code/machinelearning/theano_test.py
+'0  3  18  /etc/rc.d/redshift_onstartup.sh
+'1  24  0  ~/.bashrc
+'2  1  0  ~/code/AI-Programmer/AIProgrammer.sln
+'3  19  27  ~/.bashrc
+'4  20  30  ~/.bashrc
+'5  23  23  ~/.bashrc
+'6  25  12  ~/.bashrc
+'7  1  0  /usr/bin/redshift
+'8  1  0  ~/0
+'9  201  71  ~/code/machinelearning/MLP-for-MNIST/mlp.py
 
 # Jumplist (newest first):
--'  13  0  ~/.tmux.conf
--'  1  0  ~/Downloads/gcc-4.9.4/configure.ac
--'  2  0  ~/Downloads/gcc-4.9.4/configure.ac
--'  25  23  ~/.theanorc
--'  20  0  ~/.theanorc
--'  1  0  ~/.theanorc
--'  10  6  ~/
--'  6  0  ~/
--'  9  0  ~/.theano
--'  11  14  ~/code/machinelearning/nosetests_theano.output.txt
--'  1  0  ~/code/machinelearning/nosetests_theano.output.txt
--'  3  12  ~/code/machinelearning/nosetests.py
--'  1  0  ~/code/machinelearning/nosetests.py
--'  7  0  ~/.vimrc
--'  6  0  ~/.vimrc
--'  22  0  ~/.vimrc
--'  7  0  ~/code/machinelearning/theano_test.py
--'  1  0  ~/code/machinelearning/theano_test.py
--'  4  0  ~/code/machinelearning/theano_test.py
--'  2  0  ~/code/machinelearning/theano_test.py
--'  37  21  ~/.bashrc
--'  34  0  ~/.bashrc
--'  38  0  ~/.bashrc
--'  25  0  ~/.bashrc
--'  3  0  ~/code/machinelearning/theano_test.py
--'  1  0  ~/theano_test.py
--'  1  0  ~/0
--'  11  0  ~/code/machinelearning/theano_test.py
--'  5  0  ~/code/machinelearning/theano_test.py
--'  23  4  ~/code/machinelearning/theano_test.py
--'  18  20  ~/.vimrc
--'  19  0  ~/.vimrc
--'  382  0  ~/vim.~
--'  1  0  ~/vim.~
--'  10  0  ~/.tmux.conf
--'  8  0  ~/.bash_profile
--'  26  0  ~/.vimrc
--'  31  0  ~/.bashrc
--'  1  0  /etc/ssh/sshd_config
--'  3  42  /etc/rc.d/redshift_onstartup.sh
--'  1  0  /etc/rc.d/redshift_onstartup.sh
--'  3  42  /etc/rc.d/init.d/redshift_onstartup.sh
--'  1  0  /etc/rc.d/init.d/redshift_onstartup.sh
--'  30  0  ~/.bashrc
--'  32  19  ~/.bashrc
--'  2  0  /etc/rc.d/init.d/functions
--'  1  0  /etc/rc.d/init.d/functions
--'  44  0  /etc/rc.d/init.d/network
--'  1  0  /etc/rc.d/init.d/network
--'  1  0  /usr/share/doc/initscripts-*/sysconfig.txt
--'  1  0  /usr/share/doc/initscripts/examples/networking/ifcfg-bridge
--'  8  0  ~/.bashrc
--'  7  4  ~/.bashrc
--'  1  0  ~/.bash_profile
--'  1  0  /usr/bin/redshift_onstartup.sh
--'  3  46  /usr/bin/redshift_onstartup.sh
--'  1  0  /usr/bin/zip
--'  1  0  ~/Documents/scienceassign.txt
--'  25  0  ~/Documents/scienceassign.txt
--'  10  0  ~/Documents/scienceassign.txt
--'  7  4  ~/Documents/scienceassign.txt
--'  28  0  ~/Documents/scienceassign.txt
--'  26  0  ~/.bashrc
--'  5  10  ~/.tmux.conf
--'  6  0  ~/.tmux.conf
--'  30  0  ~/Documents/scienceassign.txt
--'  32  0  ~/Documents/scienceassign.txt
--'  17  0  ~/.vimrc
--'  9  0  ~/.tmux.conf
--'  2  0  ~/.tmux.conf
--'  11  0  ~/.tmux.conf
+-'  3  18  /etc/rc.d/redshift_onstartup.sh
+-'  24  0  ~/.bashrc
+-'  19  0  ~/.bashrc
+-'  1  0  ~/code/AI-Programmer/AIProgrammer.sln
+-'  20  0  ~/.bashrc
 -'  23  0  ~/.bashrc
--'  12  0  ~/.tmux.conf
--'  3  0  ~/.tmux.conf
--'  22  0  ~/.bashrc
--'  9  0  ~/.bash_profile
--'  1  0  ~/.bash_p
--'  1  0  ~/.bash
--'  1  0  ~/.tmux.conf
--'  27  0  ~/.tmux.conf
--'  44  28  ~/Documents/scienceassign.txt
--'  48  0  ~/Documents/scienceassign.txt
--'  21  0  ~/Documents/scienceassign.txt
--'  31  6  ~/Documents/scienceassign.txt
--'  22  0  ~/Documents/scienceassign.txt
--'  1  0  ~/Documents/science.txt
--'  1  0  ~/Documents/scienceassign.sh
--'  1  0  ~/Documents/science
--'  2  0  ~/Documents/scienceassign.py
--'  1  0  ~/Documents/scienceassign.py
--'  32  0  ~/Documents/science.txt
--'  4  64  ~/Documents/science.txt
--'  8  52  ~/Documents/science.txt
--'  29  0  ~/Documents/science.txt
--'  23  1  ~/Documents/science.txt
--'  20  0  ~/Documents/science.txt
--'  19  2  ~/Documents/science.txt
+-'  25  0  ~/.bashrc
+-'  1  0  /usr/bin/redshift
+-'  1  0  ~/0
+-'  39  0  ~/.bashrc
+-'  201  71  ~/code/machinelearning/MLP-for-MNIST/mlp.py
+-'  201  71  ~/code/machinelearning/Theano-Tutorials/mlp.py
+-'  12  0  ~/code/machinelearning/Theano-Tutorials/mlp.py
+-'  205  14  ~/code/machinelearning/Theano-Tutorials/mlp.py
+-'  3  0  ~/code/machinelearning/Theano-Tutorials/mlp.py
+-'  1  0  ~/code/machinelearning/Theano-Tutorials/sgd_logistic_regression.py
+-'  410  1897  ~/code/machinelearning/Theano-Tutorials/mlp.py
+-'  1  0  ~/code/machinelearning/Theano-Tutorials/mlp.py
+-'  8  0  ~/code/machinelearning/old/theano_test.py
+-'  7  0  ~/code/machinelearning/old/theano_test.py
+-'  116  0  ~/code/machinelearning/6_my_mlp.py
+-'  201  8  ~/code/machinelearning/Theano-Tutorials/deep_learning_mlp.py
+-'  166  8  ~/code/machinelearning/Theano-Tutorials/deep_learning_mlp.py
+-'  1  0  ~/code/machinelearning/Theano-Tutorials/media/datasets/mnist/de
+-'  1  0  ~/code/machinelearning/Theano-Tutorials/deep_learning_mlp.py
+-'  591  0  ~/code/machinelearning/Theano-Tutorials/deep_learning_mlp.py
+-'  943  0  ~/code/machinelearning/Theano-Tutorials/deep_learning_mlp.py
+-'  108  10  ~/code/machinelearning/6_my_mlp.py
+-'  101  34  ~/code/machinelearning/6_my_mlp.py
+-'  99  62  ~/code/machinelearning/6_my_mlp.py
+-'  91  0  ~/code/machinelearning/6_my_mlp.py
+-'  58  28  ~/code/machinelearning/6_my_mlp.py
+-'  56  13  ~/code/machinelearning/6_my_mlp.py
+-'  22  0  ~/code/machinelearning/6_my_mlp.py
+-'  1  0  ~/code/machinelearning/6_my_mlp.py
+-'  14  0  ~/code/machinelearning/6_my_mlp.py
+-'  17  0  ~/code/machinelearning/6_my_mlp.py
+-'  19  0  ~/code/machinelearning/6_my_mlp.py
+-'  25  0  ~/code/machinelearning/6_my_mlp.py
+-'  29  0  ~/code/machinelearning/6_my_mlp.py
+-'  34  0  ~/code/machinelearning/6_my_mlp.py
+-'  42  0  ~/code/machinelearning/6_my_mlp.py
+-'  55  0  ~/code/machinelearning/6_my_mlp.py
+-'  75  0  ~/code/machinelearning/6_my_mlp.py
+-'  78  0  ~/code/machinelearning/6_my_mlp.py
+-'  83  0  ~/code/machinelearning/6_my_mlp.py
+-'  85  0  ~/code/machinelearning/6_my_mlp.py
+-'  89  0  ~/code/machinelearning/6_my_mlp.py
+-'  95  0  ~/code/machinelearning/6_my_mlp.py
+-'  116  0  ~/code/machinelearning/6_my_mlp.py
+-'  201  8  ~/code/machinelearning/Theano-Tutorials/deep_learning_mlp.py
+-'  166  8  ~/code/machinelearning/Theano-Tutorials/deep_learning_mlp.py
+-'  1  0  ~/code/machinelearning/Theano-Tutorials/media/datasets/mnist/de
+-'  1  0  ~/code/machinelearning/Theano-Tutorials/deep_learning_mlp.py
+-'  591  0  ~/code/machinelearning/Theano-Tutorials/deep_learning_mlp.py
+-'  943  0  ~/code/machinelearning/Theano-Tutorials/deep_learning_mlp.py
+-'  108  10  ~/code/machinelearning/6_my_mlp.py
+-'  101  34  ~/code/machinelearning/6_my_mlp.py
+-'  99  62  ~/code/machinelearning/6_my_mlp.py
+-'  91  0  ~/code/machinelearning/6_my_mlp.py
+-'  58  28  ~/code/machinelearning/6_my_mlp.py
+-'  56  13  ~/code/machinelearning/6_my_mlp.py
+-'  22  0  ~/code/machinelearning/6_my_mlp.py
+-'  1  0  ~/code/machinelearning/6_my_mlp.py
+-'  14  0  ~/code/machinelearning/6_my_mlp.py
+-'  17  0  ~/code/machinelearning/6_my_mlp.py
+-'  19  0  ~/code/machinelearning/6_my_mlp.py
+-'  25  0  ~/code/machinelearning/6_my_mlp.py
+-'  29  0  ~/code/machinelearning/6_my_mlp.py
+-'  34  0  ~/code/machinelearning/6_my_mlp.py
+-'  42  0  ~/code/machinelearning/6_my_mlp.py
+-'  55  0  ~/code/machinelearning/6_my_mlp.py
+-'  75  0  ~/code/machinelearning/6_my_mlp.py
+-'  78  0  ~/code/machinelearning/6_my_mlp.py
+-'  83  0  ~/code/machinelearning/6_my_mlp.py
+-'  85  0  ~/code/machinelearning/6_my_mlp.py
+-'  89  0  ~/code/machinelearning/6_my_mlp.py
+-'  95  0  ~/code/machinelearning/6_my_mlp.py
+-'  1  0  ~/code/machinelearning/Theano-Tutorials/deep_learning_mlp.py
+-'  475  4  ~/code/machinelearning/Theano-Tutorials/deep_learning_mlp.py
+-'  220  3  ~/code/machinelearning/Theano-Tutorials/deep_learning_mlp.py
+-'  400  0  ~/code/machinelearning/Theano-Tutorials/deep_learning_mlp.py
+-'  201  8  ~/code/machinelearning/Theano-Tutorials/deep_learning_mlp.py
+-'  116  0  ~/code/machinelearning/6_my_mlp.py
+-'  166  8  ~/code/machinelearning/Theano-Tutorials/deep_learning_mlp.py
+-'  1  0  ~/code/machinelearning/Theano-Tutorials/media/datasets/mnist/de
+-'  591  0  ~/code/machinelearning/Theano-Tutorials/deep_learning_mlp.py
+-'  943  0  ~/code/machinelearning/Theano-Tutorials/deep_learning_mlp.py
+-'  108  10  ~/code/machinelearning/6_my_mlp.py
+-'  101  34  ~/code/machinelearning/6_my_mlp.py
+-'  99  62  ~/code/machinelearning/6_my_mlp.py
+-'  91  0  ~/code/machinelearning/6_my_mlp.py
+-'  58  28  ~/code/machinelearning/6_my_mlp.py
+-'  56  13  ~/code/machinelearning/6_my_mlp.py
+-'  22  0  ~/code/machinelearning/6_my_mlp.py
+-'  1  0  ~/code/machinelearning/6_my_mlp.py
+-'  14  0  ~/code/machinelearning/6_my_mlp.py
+-'  17  0  ~/code/machinelearning/6_my_mlp.py
 
 # Bar lines, copied verbatim:
 |1,4
@@ -385,78 +410,16 @@ $
 
 # History of marks within files (newest to oldest):
 
-> ~/.tmux.conf
-	"	13	0
-	^	13	63
-	.	13	62
-	+	26	0
-	+	24	5
-	+	25	30
-	+	26	0
-	+	26	21
-	+	26	0
-	+	26	58
-	+	26	0
-	+	26	0
-	+	29	0
-	+	28	0
-	+	26	2
-	+	20	10
-	+	21	7
-	+	18	7
-	+	26	0
-	+	28	0
-	+	27	41
-	+	25	0
-	+	27	0
-	+	1	34
-	+	2	41
-	+	11	20
-	+	1	0
-	+	2	0
-	+	12	24
-	+	12	0
-	+	5	0
-	+	6	0
-	+	12	0
-	+	8	9
-	+	7	9
-	+	6	11
-	+	5	11
-	+	10	18
-	+	12	0
-	+	6	12
-	+	5	0
-	+	13	62
-
-> ~/Downloads/gcc-4.9.4/configure.ac
-	"	1	0
-	.	2	0
-	+	2	0
-
-> ~/.theanorc
-	"	25	23
-	^	25	24
-	.	25	23
-	+	1	24
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	17
-	+	1	6
-	+	25	0
-	+	20	0
-	+	25	23
-
-> /etc/profile.d/kdcibfug
-	"	1	0
+> /etc/rc.d/redshift_onstartup.sh
+	"	3	18
+	^	3	19
+	.	3	18
+	+	3	18
 
 > ~/.bashrc
-	"	37	0
-	^	37	22
-	.	37	22
+	"	24	0
+	^	23	24
+	.	24	0
 	+	13	37
 	+	15	76
 	+	15	76
@@ -482,24 +445,576 @@ $
 	+	21	7
 	+	22	54
 	+	38	0
-	+	23	50
-	+	37	0
-	+	36	88
-	+	28	8
-	+	34	0
+	+	24	50
+	+	38	0
+	+	37	88
+	+	29	8
+	+	35	0
 	+	10	0
 	+	8	0
-	+	24	0
-	+	28	0
-	+	31	3
+	+	25	0
+	+	29	0
+	+	32	3
+	+	34	0
+	+	32	27
 	+	33	0
-	+	31	27
+	+	34	0
+	+	35	0
+	+	25	13
+	+	38	0
+	+	38	0
+	+	39	53
+	+	24	0
+	+	19	8
+	+	20	8
+	+	21	7
+	+	22	7
+	+	23	24
+	+	22	30
+	+	21	27
+	+	20	31
+	+	19	27
+	+	20	30
+	+	21	26
+	+	22	29
+	+	23	23
+	+	19	27
+	+	20	30
+	+	21	26
+	+	22	30
+	+	23	24
+	+	24	0
+
+> ~/code/AI-Programmer/AIProgrammer.sln
+	"	1	0
+
+> /usr/bin/redshift
+	"	1	0
+
+> ~/code/machinelearning/MLP-for-MNIST/mlp.py
+	"	201	71
+	^	201	72
+	.	201	71
+	+	201	71
+
+> ~/code/machinelearning/Theano-Tutorials/mlp.py
+	"	201	71
+	^	201	72
+	.	201	71
+	+	1	3
+	+	819	1898
+	+	1	3
+	+	410	0
+	+	201	71
+
+> ~/Documents/scienceassign.txt
+	"	4	15
+	^	4	16
+	.	22	0
+	+	1	0
+	+	22	0
+	+	23	0
+	+	31	0
+	+	18	0
+	+	31	0
+	+	33	0
+	+	34	0
+	+	34	3
+	+	44	0
+	+	34	2
+	+	48	0
+	+	36	0
+	+	44	0
+	+	37	9
+	+	37	0
+	+	44	0
+	+	37	10
+	+	38	2
+	+	45	0
+	+	42	0
+	+	46	3
+	+	42	5
+	+	43	0
+	+	47	9
+	+	32	49
+	+	41	3
+	+	28	0
+	+	28	0
+	+	28	0
+	+	1	0
+	+	1	0
+	+	22	0
+
+> ~/Documents/theano-test_results-1000.py
+	"	17	0
+	^	10	1
+	.	10	0
+	+	1	9
+	+	1	0
+	+	1	19
+	+	1	24
+	+	1	59
+	+	1	0
+	+	1	14
+	+	1	0
+	+	1	0
+	+	1	21
+	+	1	4
+	+	1	0
+	+	1	31
+	+	17	9
+	+	15	14
+	+	16	11
+	+	15	24
+	+	14	0
+	+	15	1
+	+	14	1
+	+	16	1
+	+	14	0
+	+	6	5
+	+	14	0
+	+	6	6
+	+	11	19
+	+	5	0
+	+	10	0
+
+> ~/code/machinelearning/Theano-Tutorials/sgd_logistic_regression.py
+	"	1	0
+
+> ~/.vimrc
+	"	10	0
+	^	10	0
+	.	10	0
+	+	14	16
+	+	30	12
+	+	30	0
+	+	14	0
+	+	16	16
+	+	14	15
+	+	14	39
+	+	17	53
+	+	18	22
+	+	29	46
+	+	28	0
+	+	28	0
+	+	28	0
+	+	23	49
+	+	23	49
+	+	28	18
+	+	24	0
+	+	23	0
+	+	24	1
+	+	24	0
+	+	12	6
+	+	23	0
+	+	26	17
+	+	18	0
+	+	22	0
+	+	18	12
+	+	24	0
+	+	30	0
+	+	29	0
+	+	30	0
+	+	29	42
+	+	25	0
+	+	24	5
+	+	25	4
+	+	26	4
+	+	27	0
+	+	29	0
+	+	25	43
+	+	24	43
+	+	25	38
+	+	24	0
+	+	25	0
+	+	24	14
+	+	25	14
+	+	24	14
+	+	25	13
+	+	24	0
+	+	25	0
+	+	25	0
+	+	24	14
+	+	25	18
+	+	9	0
+	+	7	0
+	+	57	0
+	+	48	0
+	+	48	0
+	+	5	0
+	+	5	0
+	+	6	0
+	+	9	18
+	+	10	20
+	+	34	0
+	+	32	0
+	+	31	0
+	+	35	0
+	+	40	0
+	+	36	0
+	+	39	0
+	+	20	0
+	+	18	3
+	+	19	14
+	+	16	0
+	+	19	19
 	+	32	0
 	+	33	0
 	+	34	0
-	+	24	13
-	+	38	0
-	+	37	22
+	+	38	29
+	+	15	0
+	+	16	0
+	+	10	0
+	+	20	8
+	+	19	98
+	+	20	11
+	+	18	15
+	+	20	0
+	+	18	0
+	+	10	0
+	+	9	0
+	+	10	0
+	+	9	0
+	+	11	0
+	+	10	0
+	+	9	0
+	+	10	0
+	+	9	0
+	+	10	0
+	+	17	0
+	+	20	9
+	+	9	0
+	+	10	0
+
+> ~/code/machinelearning/Theano-Tutorials/deep_learning_mlp.py
+	"	1	0
+	.	2	0
+	+	944	0
+	+	1	3
+	+	943	0
+	+	1	0
+	+	1	67
+	+	591	0
+	+	1	61
+	+	1	2896
+	+	1	2438
+	+	1	12
+	+	1	11
+	+	1	0
+	+	2	0
+
+> ~/code/machinelearning/old/theano_test.py
+	"	8	0
+	^	7	9
+	.	7	8
+	+	7	8
+
+> ~/code/machinelearning/6_my_mlp.py
+	"	116	0
+	^	115	78
+	.	115	78
+	+	76	6
+	+	72	5
+	+	80	0
+	+	82	31
+	+	84	0
+	+	8	21
+	+	6	7
+	+	6	7
+	+	1	0
+	+	8	0
+	+	84	15
+	+	87	15
+	+	86	65
+	+	91	30
+	+	91	0
+	+	92	0
+	+	93	0
+	+	94	0
+	+	91	1
+	+	92	1
+	+	93	1
+	+	94	1
+	+	92	24
+	+	93	26
+	+	90	71
+	+	93	34
+	+	97	28
+	+	96	11
+	+	93	28
+	+	94	34
+	+	96	75
+	+	105	1
+	+	102	1
+	+	110	40
+	+	148	0
+	+	107	31
+	+	109	20
+	+	110	38
+	+	112	53
+	+	109	0
+	+	115	78
+	+	123	57
+	+	148	0
+	+	128	0
+	+	136	1
+	+	134	1
+	+	132	1
+	+	147	5
+	+	138	2
+	+	147	54
+	+	137	11
+	+	133	6
+	+	115	78
+	m	56	13
+	n	56	13
+
+> ~/code/machinelearning/Theano-Tutorials/media/datasets/mnist/de
+	"	1	0
+
+> ~/.tmux.conf
+	"	8	0
+	^	8	13
+	.	8	12
+	+	28	0
+	+	26	5
+	+	27	30
+	+	28	0
+	+	28	21
+	+	28	0
+	+	28	58
+	+	28	0
+	+	28	0
+	+	31	0
+	+	30	0
+	+	28	2
+	+	22	10
+	+	23	7
+	+	20	7
+	+	28	0
+	+	30	0
+	+	29	41
+	+	27	0
+	+	29	0
+	+	1	34
+	+	2	41
+	+	11	20
+	+	1	0
+	+	2	0
+	+	12	24
+	+	12	0
+	+	5	0
+	+	6	0
+	+	12	0
+	+	8	9
+	+	7	9
+	+	6	11
+	+	5	11
+	+	10	18
+	+	12	0
+	+	6	12
+	+	5	0
+	+	13	0
+	+	10	7
+	+	15	24
+	+	16	73
+	+	10	0
+	+	16	6
+	+	16	6
+	+	16	0
+	+	8	4
+	+	11	0
+	+	8	23
+	+	11	22
+	+	10	11
+	+	11	19
+	+	8	8
+	+	11	19
+	+	8	12
+
+> ~/code/machinelearning/Theano-Tutorials/6_my_mlp.py
+	"	73	4
+
+> ~/code/machinelearning/my_mlp.py
+	"	5	0
+	^	75	2
+	.	77	1
+	+	2	24
+	+	1	0
+	+	1	0
+	+	1	0
+	+	3	69
+	+	4	0
+	+	4	2
+	+	6	0
+	+	4	17
+	+	24	0
+	+	8	31
+	+	12	10
+	+	13	0
+	+	23	61
+	+	32	50
+	+	38	78
+	+	42	23
+	+	80	0
+	+	43	76
+	+	42	52
+	+	55	55
+	+	79	0
+	+	56	25
+	+	55	56
+	+	56	29
+	+	55	14
+	+	56	50
+	+	46	0
+	+	56	52
+	+	56	55
+	+	59	9
+	+	59	32
+	+	56	16
+	+	60	17
+	+	61	4
+	+	61	4
+	+	61	4
+	+	57	0
+	+	58	5
+	+	59	0
+	+	58	22
+	+	57	5
+	+	59	5
+	+	61	5
+	+	63	5
+	+	58	5
+	+	62	5
+	+	61	27
+	+	62	2
+	+	57	29
+	+	63	18
+	+	64	17
+	+	65	5
+	+	66	5
+	+	67	18
+	+	65	30
+	+	66	22
+	+	62	22
+	+	68	33
+	+	79	26
+	+	79	22
+	+	79	0
+	+	69	30
+	+	70	0
+	+	69	5
+	+	70	35
+	+	72	31
+	+	73	0
+	+	72	30
+	+	73	30
+	+	75	39
+	+	78	0
+	+	78	0
+	+	78	0
+	+	76	31
+	+	77	1
+	a	8	6
+
+> /usr/share/vim/vim74/doc/intro.txt
+	"	443	8
+
+> ~/code/machinelearning/Theano-Tutorials/load.py
+	"	1	0
+
+> ~/code/machinelearning/Theano-Tutorials/2_logistic_regression.py
+	"	36	0
+
+> ~/code/machinelearning/Theano-Tutorials/2
+	"	1	0
+
+> ~/code/machinelearning/Theano-Tutorials/my_mlp.py
+	"	4	0
+
+> ~/code/machinelearning/Theano-Tutorials/.my_m*
+	"	1	0
+
+> ~/code/Theano-Tutorials/load.py
+	"	27	0
+	^	4	16
+	.	4	16
+	+	4	16
+
+> ~/code/Theano-Tutorials/download_mnist.sh
+	"	5	0
+	^	5	0
+	.	5	0
+	+	3	9
+	+	5	0
+
+> ~/code/Theano-Tutorials/README.md
+	"	1	0
+
+> /etc/rc.d/init.d/redshift_onstartup.sh
+	"	3	18
+	^	3	19
+	.	3	18
+	+	3	18
+
+> ~/.theanorc
+	"	5	15
+	^	5	16
+	.	5	15
+	+	1	24
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	17
+	+	1	6
+	+	25	0
+	+	20	0
+	+	25	23
+	+	6	9
+	+	5	15
+	+	7	0
+	+	6	9
+	+	5	15
+	n	6	10
+
+> /usr/bin/gcc
+	"	1	0
+
+> /usr/local/cuda-7.5/README
+	"	1	0
+
+> /usr/local/cuda-7.5/r
+	"	1	0
+
+> /etc/ld.so.conf
+	"	1	0
+
+> ~/Downloads/config.log
+	"	1	0
+
+> ~/Downloads/serdep.tmp
+	"	1	0
+
+> ~/Documents/test-gpu_cuda.sh
+	"	32	27
+	^	50	9
+	.	50	0
+	+	1	109
+	+	1	114
+	+	50	0
+
+> /usr/local/cuda-7.5/samples/1_Utilities/deviceQuery/readme.txt
+	"	1	0
+
+> ~/Downloads/gcc-4.9.4/configure.ac
+	"	1	0
+	.	2	0
+	+	2	0
+
+> /etc/profile.d/kdcibfug
+	"	1	0
 
 > ~/code/machinelearning/nosetests_theano.output.txt
 	"	11	14
@@ -509,110 +1024,6 @@ $
 	^	3	13
 	.	3	12
 	+	3	12
-
-> ~/.vimrc
-	"	7	0
-	.	7	0
-	+	79	0
-	+	80	0
-	+	79	0
-	+	82	0
-	+	5	19
-	+	35	41
-	+	9	19
-	+	9	18
-	+	4	19
-	+	5	0
-	+	9	39
-	+	34	22
-	+	35	40
-	+	9	19
-	+	9	0
-	+	35	62
-	+	10	32
-	+	35	41
-	+	10	67
-	+	31	32
-	+	10	31
-	+	38	11
-	+	50	0
-	+	50	0
-	+	38	0
-	+	36	27
-	+	46	33
-	+	36	27
-	+	37	7
-	+	46	34
-	+	48	40
-	+	37	1
-	+	48	0
-	+	37	7
-	+	38	0
-	+	48	29
-	+	48	29
-	+	38	0
-	+	39	0
-	+	38	6
-	+	37	0
-	+	39	20
-	+	39	20
-	+	49	32
-	+	50	0
-	+	10	7
-	+	10	22
-	+	13	16
-	+	27	12
-	+	27	0
-	+	13	0
-	+	15	16
-	+	13	15
-	+	13	39
-	+	16	53
-	+	17	22
-	+	26	46
-	+	25	0
-	+	25	0
-	+	25	0
-	+	20	49
-	+	20	49
-	+	25	18
-	+	21	0
-	+	20	0
-	+	21	1
-	+	21	0
-	+	11	6
-	+	20	0
-	+	23	17
-	+	17	0
-	+	19	0
-	+	17	12
-	+	21	0
-	+	27	0
-	+	26	0
-	+	27	0
-	+	26	42
-	+	22	0
-	+	21	5
-	+	22	4
-	+	23	4
-	+	24	0
-	+	26	0
-	+	22	43
-	+	21	43
-	+	22	38
-	+	21	0
-	+	22	0
-	+	21	14
-	+	22	14
-	+	21	14
-	+	22	13
-	+	21	0
-	+	22	0
-	+	22	0
-	+	21	14
-	+	22	18
-	+	9	0
-	+	7	0
 
 > ~/code/machinelearning/theano_test.py
 	"	7	0
@@ -668,23 +1079,8 @@ $
 	+	9	0
 	+	1	0
 
-> /etc/rc.d/redshift_onstartup.sh
-	"	3	42
-	^	3	43
-	.	3	42
-	+	3	42
-
-> /etc/rc.d/init.d/redshift_onstartup.sh
-	"	3	42
-	^	3	43
-	.	3	42
-	+	3	42
-
 > /etc/rc.d/init.d/README
 	"	27	8
-
-> /usr/bin/redshift
-	"	1	0
 
 > /etc/rc.d/init.d/functions
 	"	90	0
@@ -706,42 +1102,6 @@ $
 
 > /usr/bin/zip
 	"	1	0
-
-> ~/Documents/scienceassign.txt
-	"	1	0
-	^	32	11
-	.	1	0
-	+	1	0
-	+	22	0
-	+	23	0
-	+	31	0
-	+	18	0
-	+	31	0
-	+	33	0
-	+	34	0
-	+	34	3
-	+	44	0
-	+	34	2
-	+	48	0
-	+	36	0
-	+	44	0
-	+	37	9
-	+	37	0
-	+	44	0
-	+	37	10
-	+	38	2
-	+	45	0
-	+	42	0
-	+	46	3
-	+	42	5
-	+	43	0
-	+	47	9
-	+	32	49
-	+	41	3
-	+	28	0
-	+	28	0
-	+	28	0
-	+	1	0
 
 > ~/.bash_p
 	"	1	0

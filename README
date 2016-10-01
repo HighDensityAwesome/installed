@@ -3,3 +3,7 @@
 .tmux-conf
 .viminfo
 .vimrc
+
+
+# TO DO #
+Create .sh script that automatically runs every n-days to push any new local changes to respective files in repo.

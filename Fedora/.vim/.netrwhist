@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/dan'
+let g:netrw_dirhist_2='/etc/profile.d'
+let g:netrw_dirhist_3='/home/dan/code/machinelearning'
+let g:netrw_dirhist_4='/home/dan/code/machinelearning/Theano-Tutorials'
+let g:netrw_dirhist_5='/etc/rc.d'
+let g:netrw_dirhist_6='/etc/rc.d/init.d'
+let g:netrw_dirhist_7='/etc/profile.d'

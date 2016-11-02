@@ -1,0 +1,89 @@
+##########################################################
+##	CURRENT HELPFUL LIST OF INSTALLED THINGS	##
+##########################################################
+
+## APPLICATIONS ##
+google-chrome
+gparted
+vimx (compiled with clipboard?)
+tmux
+gnome-tweak-tool:
+	windows, bottom-toggle minimise and maximise buttons
+	appearance, toggle dark mode
+
+Dconf Editor
+nano
+redshift
+kodi:
+	dnf install --nogpgcheck \
+	 http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm  \
+ 	 http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm	
+	sudo dnf install kodi
+
+Fedora LiveUSB Creator
+UNetBootIn
+
+## DRIVERS/SEMI-MISC ##
+
+NVIDIA Drivers:
+https://www.if-not-true-then-false.com/2015/fedora-nvidia-guide/
+
+	## 1 ##
+		
+		sudo su		
+
+		sudo dnf install kernel-devel kernel-headers gcc dkms acpid
+
+		echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf
+	
+		nano /etc/sysconfig/grub
+		Edit /etc/sysconfig/grub:
+			append ‘rd.driver.blacklist=nouveau’ to end of ‘GRUB_CMDLINE_LINUX=”…”‘
+
+		#UPDATE GRUB2 CONF
+			## BIOS ##
+		grub2-mkconfig -o /boot/grub2/grub.cfg
+			## UEFI ## LIKELY USING THIS ##
+		grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+	
+		#REMOVE XORG-X11-DRV-NOUVEAU
+		dnf remove xorg-x11-drv-nouveau
+
+		#GEN INITRAMFS
+			## Backup old initramfs nouveau image ##
+		mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
+			## Create new initramfs image ##
+		dracut /boot/initramfs-$(uname -r).img $(uname -r)
+
+		#REBOOT TO RUNLEVEL 3(with grub edit or following):
+		systemctl set-default multi-user.target
+
+		reboot
+
+	## 2 ##
+
+		#INSTALL NVIDIA DRIVERS
+		sudo su
+
+		./NVIDIA-Linux-*.run
+
+		ACCEPT
+
+		YES
+		
+		YES
+
+		YES
+
+		OK
+
+		systemctl set-default graphical.target
+ 
+		reboot
+
+## EXTENSIONS ##
+
+Multi Monitors Add-On
+Removable Drive Menu
+Shutdown Timer
+Drop-Down Terminal

@@ -20,6 +20,7 @@ kodi:
 
 UNetBootIn
 QBitTorrent
+VLC
 
 
 ## SOFTWARE APPLICATIONS ##

@@ -2,8 +2,7 @@
 ##	CURRENT HELPFUL LIST OF INSTALLED THINGS	##
 ##########################################################
 
-## APPLICATIONS ##
-google-chrome
+## DNF APPLICATIONS ##
 gparted
 vimx (compiled with clipboard?)
 tmux
@@ -11,7 +10,6 @@ gnome-tweak-tool:
 	windows, bottom-toggle minimise and maximise buttons
 	appearance, toggle dark mode
 
-Dconf Editor
 nano
 redshift
 kodi:
@@ -20,8 +18,16 @@ kodi:
  	 http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm	
 	sudo dnf install kodi
 
-Fedora LiveUSB Creator
 UNetBootIn
+QBitTorrent
+
+
+## SOFTWARE APPLICATIONS ##
+
+google-chrome
+Dconf Editor
+Fedora LiveUSB Creator
+
 
 ## DRIVERS/SEMI-MISC ##
 

@@ -11,6 +11,7 @@ gnome-tweak-tool:
 	appearance, toggle dark mode
 
 nano
+iPython
 redshift
 kodi:
 	dnf install --nogpgcheck \
@@ -21,6 +22,7 @@ kodi:
 UNetBootIn
 QBitTorrent
 VLC
+CompizConfig Settings Manager
 
 
 ## SOFTWARE APPLICATIONS ##

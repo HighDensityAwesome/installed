@@ -24,8 +24,7 @@ UNetBootIn
 QBitTorrent
 VLC
 CompizConfig Settings Manager
-mpc (dependancy for gcc 4.9.4 compiled from source)
-
+gcc-c++ (NEEDED FOR MANUAL GCC COMPILATION FROM SOURCE)
 
 ## SOFTWARE APPLICATIONS ##
 

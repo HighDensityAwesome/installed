@@ -2,7 +2,12 @@
 ##	CURRENT HELPFUL LIST OF INSTALLED THINGS	##
 ##########################################################
 
+---------------------------------------------------------------------------------------
+
+######################
 ## DNF APPLICATIONS ##
+######################
+
 gparted
 vimx (compiled with clipboard?)
 tmux
@@ -26,15 +31,27 @@ VLC
 CompizConfig Settings Manager
 gcc-c++ (NEEDED FOR MANUAL GCC COMPILATION FROM SOURCE)
 
+
+###################
+##      PIP      ##
+###################
+
+virtualenv:
+	theano
+
+
+###########################
 ## SOFTWARE APPLICATIONS ##
+###########################
 
 google-chrome
 Dconf Editor
 Fedora LiveUSB Creator
 
 
-## DRIVERS/SEMI-MISC ##
-
+###########################
+##   DRIVERS/SEMI-MISC   ##
+###########################
 NVIDIA Drivers:
 https://www.if-not-true-then-false.com/2015/fedora-nvidia-guide/
 
@@ -91,7 +108,10 @@ https://www.if-not-true-then-false.com/2015/fedora-nvidia-guide/
  
 		reboot
 
-## EXTENSIONS ##
+
+####################
+##   EXTENSIONS   ##
+####################
 
 Multi Monitors Add-On
 Removable Drive Menu

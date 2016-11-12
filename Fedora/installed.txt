@@ -30,15 +30,15 @@ QBitTorrent
 VLC
 CompizConfig Settings Manager
 gcc-c++ (NEEDED FOR MANUAL GCC COMPILATION FROM SOURCE)
+python-devel
 
-
-###################
+####################
 ##      PIP      ##
 ###################
 
 virtualenv:
 	theano
-
+	nose
 
 ###########################
 ## SOFTWARE APPLICATIONS ##

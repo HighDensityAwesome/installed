@@ -40,15 +40,9 @@ alias lsl='ls -lX'
 # update local github repo in current working directory
 git-update()
 {
-	if [[ $# -eq 0 ]] ; then
-		echo 'No file specified and no commit message given, aborting.'
-	fi
-
-	if [[ $# -eq 1 ]] ; then
-		echo 'Only one parameter specified, need two, aborting.'
-	fi
-
-	if [[ $# -eq 2 ]] ; then
+	if [[ $# < 2 ]] ; then
+		echo 'Not enough parameters given, check file and commit message. Aborting'
+	else
 		git add "$1" && git commit -m "$2" && git push origin master
 		return
 	fi
@@ -84,11 +78,12 @@ update-bashrc() {
 	rm /home/dan/code/dotfiles/Fedora/.bashrc && 
 	cp /home/dan/.bashrc /home/dan/code/dotfiles/Fedora/ &&
 	cd /home/dan/code/dotfiles/Fedora &&
-	if [[ $# -eq 0 ]] ; then
+	if [[ $# < 1 ]] ; then
 		echo 'No arguments specified, try a adding commit message'
 		return
+	else
+			git-update .bashrc "$1"
 	fi
-	git-update .bashrc "$1" 
 }
 
 #update remote installed.txt in installed repo

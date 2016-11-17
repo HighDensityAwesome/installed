@@ -68,7 +68,7 @@ update-bashrc() {
 	initial_working_directory=$(pwd)
 	rm /home/dan/code/dotfiles/Fedora/.bashrc && 
 	cp /home/dan/.bashrc /home/dan/code/dotfiles/Fedora/ &&
-	cd /home/dan/code/dotfiles/Fedora > /dev/null &&
+	cd /home/dan/code/dotfiles/Fedora > /dev/null;
 	if [[ $# < 1 ]] ; then
 		echo 'No arguments specified, try a adding commit message'
 		return

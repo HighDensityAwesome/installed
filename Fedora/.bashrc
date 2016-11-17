@@ -75,6 +75,7 @@ function cd() {
 
 # update remote .bashrc in dotfiles repo
 update-bashrc() {
+	initial_working_directory=$(pwd)
 	rm /home/dan/code/dotfiles/Fedora/.bashrc && 
 	cp /home/dan/.bashrc /home/dan/code/dotfiles/Fedora/ &&
 	cd /home/dan/code/dotfiles/Fedora &&
@@ -84,6 +85,7 @@ update-bashrc() {
 	else
 			git-update .bashrc "$1"
 	fi
+	cd $initial_working_directory
 }
 
 #update remote installed.txt in installed repo

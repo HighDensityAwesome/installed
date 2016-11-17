@@ -73,7 +73,7 @@ update-bashrc() {
 		echo 'No arguments specified, try a adding commit message'
 		return
 	else
-			git-update .bashrc "$1"
+			git-update .bashrc "$@"
 			return
 	fi
 	cd $initial_working_directory

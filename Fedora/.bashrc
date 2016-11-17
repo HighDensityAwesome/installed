@@ -12,6 +12,9 @@ fi
 
 # User specific aliases and functions
 
+######################
+##	ALIASES     ##
+######################
 
 #alias ls='ls -GFh' #list with a little flair ;) 
 
@@ -27,15 +30,10 @@ alias v='vimx'
 # list all as list in filetype/extension order
 alias lsl='ls -lX'
 
-# when changing directories automatically list what is in them
-[ -z "$PS1" ] && return
-function cd() {
-    new_directory="$*";
-    if [ $# -eq 0 ]; then 
-        new_directory=${HOME};
-    fi;
-    builtin cd "${new_directory}" && ls -F
-}
+
+##########################
+##	FUNCTIONS	##
+##########################
 
 # update local github repo in current working directory
 git-update()
@@ -50,7 +48,6 @@ git-rm()
 }
 
 #Configure Vim SuperMan for reading unix "man" pages faster than light
-
 vman() {
 	  vim -c "SuperMan $*"
 
@@ -59,9 +56,35 @@ vman() {
 	  fi
 }
 
+# when changing directories automatically list what is in them
+[ -z "$PS1" ] && return
+function cd() {
+    new_directory="$*";
+    if [ $# -eq 0 ]; then 
+        new_directory=${HOME};
+    fi;
+    builtin cd "${new_directory}" && ls -F
+}
+
+# update all important maintained config/info files
+update-configs() {
+cd /home/dan/Documents/installed/Fedora && git-update ./installed.txt 'weekly backup')
+}
+
+##########################################
+##	ENVIRONMENT VARIABLES/MISC	##
+##########################################
+
 complete -o default -o nospace -F _man vman #tab completion for SuperMAN pages vim plugin
 export CXX=/usr/local/gcc-4.9.4
 export EVENT_NOEPOLL=1 #SlimuxREPLSendLine freeze fix
 
 #custom built-from-source gcc-4.9.4
 export PATH=/usr/local/bin/gcc-4.9.4/bin:$PATH
+
+#CUDA Environment
+export CUDA_HOME=/usr/local/cuda-7.5 
+export LD_LIBRARY_PATH=${CUDA_HOME}/lib64 
+ 
+PATH=${CUDA_HOME}/bin:${PATH} 
+export PATH

@@ -87,12 +87,11 @@ update-installed() {
 # when changing directories automatically list what is in them
 #[ -z "$PS1" ] && return	
 function cd() {
-    if [[ -z $PS1 ]]; then
-	    builtin cd "$@" 
-	    else
-		    if [[ $(pwd) -eq '/home/dan/code/dotfiles/Fedora' ]]; then
-			    builtin cd "$@" && ls -F
-		    fi
+	pwd=$(pwd)
+	if [[ $pwd -eq $(pwd) ]]; then
+		builtin cd "$@"
+	else
+		builtin cd "$@" && ls -F
 	fi
 }
 

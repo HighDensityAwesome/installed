@@ -89,7 +89,7 @@ update-installed() {
 function cd() {
     new_directory="$*";
     if [[ $PS1 -eq 0 ]]; then
-	    return 0
+	    builtin cd $(cd)
 	    else
 		    if [ $# -eq 0 ]; then 
    	     new_directory=${HOME};

@@ -40,7 +40,18 @@ alias lsl='ls -lX'
 # update local github repo in current working directory
 git-update()
 {
-	git add "$1" && git commit -m "$2" && git push origin master
+	if [[ $# -eq 0 ]] ; then
+		echo 'No file specified and no commit message given, aborting.'
+	fi
+
+	if [[ $# -eq 1 ]] ; then
+		echo 'Only one parameter specified, need two, aborting.'
+	fi
+
+	if [[ $# -eq 2 ]] ; then
+		git add "$1" && git commit -m "$2" && git push origin master
+		return
+	fi
 }
 
 # remove a file and update local github repo in current working directory
@@ -68,12 +79,22 @@ function cd() {
     builtin cd "${new_directory}" && ls -F
 }
 
-# update all important maintained config/info files
+# update remote .bashrc in dotfiles repo
 update-bashrc() {
 	rm /home/dan/code/dotfiles/Fedora/.bashrc && 
 	cp /home/dan/.bashrc /home/dan/code/dotfiles/Fedora/ &&
 	cd /home/dan/code/dotfiles/Fedora &&
+	if [[ $# -eq 0 ]] ; then
+		echo 'No arguments specified, try a adding commit message'
+		return
+	fi
 	git-update .bashrc "$1" 
+}
+
+#update remote installed.txt in installed repo
+update-installed() {
+	cd /home/dan/Documents/installed/Fedora &&
+	git-update installed.txt "$1" 
 }
 
 ##########################################

@@ -74,6 +74,7 @@ update-bashrc() {
 		return
 	else
 			git-update .bashrc "$1"
+			return
 	fi
 	cd $initial_working_directory
 }
@@ -85,11 +86,6 @@ update-installed() {
 }
 
 # when changing directories automatically list what is in them
-[ -z "$PS1" ] && return	
-function cd() {
-	builtin cd "$@" && ls -F
-}
-
 
 ##########################################
 ##	ENVIRONMENT VARIABLES/MISC	##

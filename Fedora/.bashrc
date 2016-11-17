@@ -63,16 +63,6 @@ vman() {
 	  fi
 }
 
-# when changing directories automatically list what is in them
-[ -z "$PS1" ] && return
-function cd() {
-    new_directory="$*";
-    if [ $# -eq 0 ]; then 
-        new_directory=${HOME};
-    fi;
-    builtin cd "${new_directory}" && ls -F
-}
-
 # update remote .bashrc in dotfiles repo
 update-bashrc() {
 	initial_working_directory=$(pwd)
@@ -93,6 +83,17 @@ update-installed() {
 	cd /home/dan/Documents/installed/Fedora &&
 	git-update installed.txt "$1" 
 }
+
+# when changing directories automatically list what is in them
+[ -z "$PS1" ] && return	
+function cd() {
+    new_directory="$*";
+    if [ $# -eq 0 ]; then 
+        new_directory=${HOME};
+    fi;
+    builtin cd "${new_directory}" && ls -F
+}
+
 
 ##########################################
 ##	ENVIRONMENT VARIABLES/MISC	##

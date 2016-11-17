@@ -67,8 +67,12 @@ function cd() {
 }
 
 # update all important maintained config/info files
-update-configs() {
-cd /home/dan/Documents/installed/Fedora && git-update ./installed.txt 'weekly backup')
+update-bashrc() {
+	rm /home/dan/code/dotfiles/Fedora/.bashrc && 
+	cp /home/dan/.bashrc /home/dan/code/dotfiles/Fedora/ &&
+	cd /home/dan/code/dotfiles/Fedora &&
+	git-update .bashrc "$1" &&
+	git-push origin master
 }
 
 ##########################################
@@ -88,3 +92,5 @@ export LD_LIBRARY_PATH=${CUDA_HOME}/lib64
  
 PATH=${CUDA_HOME}/bin:${PATH} 
 export PATH
+
+TESTING-AUTOMATION

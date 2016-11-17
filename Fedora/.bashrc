@@ -88,10 +88,10 @@ update-installed() {
 #[ -z "$PS1" ] && return	
 function cd() {
 	pwd=$(pwd)
-	if [[ $pwd -eq $(pwd) ]]; then
-		builtin cd "$@"
-	else
+	if [[ $pwd != '/home/dan/code/dotfiles/Fedora' ]]; then
 		builtin cd "$@" && ls -F
+	else
+		builtin cd "$@"
 	fi
 }
 

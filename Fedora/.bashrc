@@ -90,7 +90,9 @@ function cd() {
     if [[ -z $PS1 ]]; then
 	    builtin cd "$@" 
 	    else
-		    builtin cd "$@" && ls -F
+		    if [[ $(pwd) -eq '/home/dan/code/dotfiles/Fedora' ]]; then
+			    builtin cd "$@" && ls -F
+		    fi
 	fi
 }
 

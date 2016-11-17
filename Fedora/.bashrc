@@ -85,13 +85,17 @@ update-installed() {
 }
 
 # when changing directories automatically list what is in them
-[ -z "$PS1" ] && return	
+#[ -z "$PS1" ] && return	
 function cd() {
     new_directory="$*";
-    if [ $# -eq 0 ]; then 
-        new_directory=${HOME};
-    fi;
-    builtin cd "${new_directory}" && ls -F
+    if [[ $PS1 -eq 0 ]]; then
+	    return 0
+	    else
+		    if [ $# -eq 0 ]; then 
+   	     new_directory=${HOME};
+   	 	fi;
+   	 	builtin cd "${new_directory}" && ls -F
+	fi
 }
 
 

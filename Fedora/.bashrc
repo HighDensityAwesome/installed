@@ -21,6 +21,8 @@ fi
 #TMUX Aliases
 alias lts='tmux list-session ' #list all currently active tmux sessions
 alias kts='tmux kill-session -t ' #eg 'kt 1'
+alias ltp='tmux list-pane'
+alias ktp='tmux kill-pane -t'
 alias lw='tmux list-window ' #list tmux active windows
 alias kw='tmux kill-window -t ' #kill tmux window <id>
 alias s='tmux switch -t '
@@ -71,8 +73,7 @@ update-bashrc() {
 	rm /home/dan/code/dotfiles/Fedora/.bashrc && 
 	cp /home/dan/.bashrc /home/dan/code/dotfiles/Fedora/ &&
 	cd /home/dan/code/dotfiles/Fedora &&
-	git-update .bashrc "$1" &&
-	git push origin master
+	git-update .bashrc "$1" 
 }
 
 ##########################################
@@ -93,4 +94,3 @@ export LD_LIBRARY_PATH=${CUDA_HOME}/lib64
 PATH=${CUDA_HOME}/bin:${PATH} 
 export PATH
 
-#clean me

@@ -71,7 +71,7 @@ update-bashrc() {
 	rm /home/dan/code/dotfiles/Fedora/.bashrc && 
 	cp /home/dan/.bashrc /home/dan/code/dotfiles/Fedora/ &&
 	cd /home/dan/code/dotfiles/Fedora &&
-	git-update .bashrc -m &&
+	git-update .bashrc "$1" &&
 	git-push origin master
 }
 

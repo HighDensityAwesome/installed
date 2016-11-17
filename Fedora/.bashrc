@@ -87,9 +87,8 @@ update-installed() {
 # when changing directories automatically list what is in them
 #[ -z "$PS1" ] && return	
 function cd() {
-    new_directory="$*";
-    if [[ $PS1 -eq 0 ]]; then
-	    builtin cd 'cd'
+    if [[ -z $PS1 ]]; then
+	    builtin cd "$@" 
 	    else
 		    builtin cd "$@" && ls -F
 	fi

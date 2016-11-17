@@ -76,7 +76,7 @@ update-bashrc() {
 	else
 			git-update .bashrc "$1"
 	fi
-	cd $initial_working_directory 2>/dev/null
+	cd $initial_working_directory $clear_thing
 }
 
 #update remote installed.txt in installed repo

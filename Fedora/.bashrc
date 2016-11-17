@@ -66,9 +66,10 @@ vman() {
 # update remote .bashrc in dotfiles repo
 update-bashrc() {
 	initial_working_directory=$(pwd)
+	clear_thing=$(2>/dev/null)
 	rm /home/dan/code/dotfiles/Fedora/.bashrc && 
 	cp /home/dan/.bashrc /home/dan/code/dotfiles/Fedora/ &&
-	cd /home/dan/code/dotfiles/Fedora > /dev/null;
+	sh -c 'cd /home/dan/code/dotfiles/Fedora $clear_thing';
 	if [[ $# < 1 ]] ; then
 		echo 'No arguments specified, try a adding commit message'
 		return

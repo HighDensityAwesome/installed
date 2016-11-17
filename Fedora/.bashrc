@@ -68,7 +68,7 @@ update-bashrc() {
 	initial_working_directory=$(pwd)
 	rm /home/dan/code/dotfiles/Fedora/.bashrc && 
 	cp /home/dan/.bashrc /home/dan/code/dotfiles/Fedora/ &&
-	cd /home/dan/code/dotfiles/Fedora &&
+	cd /home/dan/code/dotfiles/Fedora > /dev/null &&
 	if [[ $# < 1 ]] ; then
 		echo 'No arguments specified, try a adding commit message'
 		return
@@ -85,14 +85,9 @@ update-installed() {
 }
 
 # when changing directories automatically list what is in them
-#[ -z "$PS1" ] && return	
+[ -z "$PS1" ] && return	
 function cd() {
-	pwd=$(pwd)
-	if [[ $pwd != '/home/dan/code/dotfiles/Fedora' ]]; then
-		builtin cd "$@" && ls -F
-	else
-		builtin cd "$@"
-	fi
+	builtin cd "$@" && ls -F
 }
 
 

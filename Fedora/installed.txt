@@ -117,3 +117,5 @@ Multi Monitors Add-On
 Removable Drive Menu
 Shutdown Timer
 Drop-Down Terminal
+Backslide
+Desktop Scroller

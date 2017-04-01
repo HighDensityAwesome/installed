@@ -9,7 +9,7 @@
 ######################
 
 gparted
-vimx (compiled with clipboard?)
+gvim (or vimx (compiled with clipboard?))
 tmux
 gnome-tweak-tool:
 	windows, bottom-toggle minimise and maximise buttons
@@ -94,15 +94,15 @@ https://www.if-not-true-then-false.com/2015/fedora-nvidia-guide/
 
 		./NVIDIA-Linux-*.run
 
-		ACCEPT
+			ACCEPT
 
-		YES
+			YES
 		
-		YES
+			YES
 
-		YES
+			YES
 
-		OK
+			OK
 
 		systemctl set-default graphical.target
  
@@ -119,5 +119,3 @@ Shutdown Timer
 Drop-Down Terminal
 Backslide
 Desktop Scroller
-
-test

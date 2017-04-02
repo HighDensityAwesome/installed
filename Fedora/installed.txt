@@ -9,7 +9,7 @@
 ######################
 
 gparted
-gvim (or vimx (compiled with clipboard?))
+vim-X11 (or gvim or vimx (compiled with clipboard))
 tmux
 gnome-tweak-tool:
 	windows, bottom-toggle minimise and maximise buttons
@@ -44,7 +44,7 @@ virtualenv:
 ## SOFTWARE APPLICATIONS ##
 ###########################
 
-google-chrome
+google-chrome (prelim programs)
 Dconf Editor
 Fedora LiveUSB Creator
 
@@ -135,3 +135,4 @@ Shutdown Timer
 Drop-Down Terminal
 Backslide
 Desktop Scroller
+Hot-Corn-Dogs (hot corners)	(not installed yet)

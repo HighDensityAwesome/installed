@@ -52,10 +52,17 @@ Fedora LiveUSB Creator
 ###########################
 ##   DRIVERS/SEMI-MISC   ##
 ###########################
-NVIDIA Drivers:
-https://www.if-not-true-then-false.com/2015/fedora-nvidia-guide/
 
 	## 1 ##
+		NVIDIA Drivers Info:
+		https://devtalk.nvidia.com/default/topic/981852/linux/resolution-patch-attached-for-nvidia-linux-driver-340-98-x86_64-using-linux-kernel-4-9/post/5038307/#5038307
+
+		NVIDIA Drivers Download (340.98 works for kernel 4.9.17):
+		http://www.nvidia.com/content/DriverDownload-March2009/confirmation.php?url=/XFree86/Linux-x86_64/340.98/NVIDIA-Linux-x86_64-340.98.run&lang=us&type=geforcem
+
+#https://www.if-not-true-then-false.com/2015/fedora-nvidia-guide/
+
+	## 2 ##
 		
 		sudo su		
 
@@ -87,7 +94,16 @@ https://www.if-not-true-then-false.com/2015/fedora-nvidia-guide/
 
 		reboot
 
-	## 2 ##
+	## 3 ##
+
+		a) Download the following NVIDIA binary/driver file from NVIDIA website for Linux: NVIDIA-Linux-x86_64-				340.98.run
+		b) Go into CLI/Terminal
+		c) Provide execution permissions: chmod 755 NVIDIA-Linux-x86_64-340.98.run
+		d) Extract: ./chmod 755 NVIDIA-Linux-x86_64-340.98.run --extract-only
+		e) Copy Patch File "nv_patch_340.98_final" into "NVIDIA-Linux-x86_64-340.98" directory
+		f) Go into (cd into) "NVIDIA-Linux-x86_64-340.98" directory where patch file is now located
+		g) Apply Patch: patch -p0 < nv_patch_340.98_final
+		h) Proceed with NVIDIA Driver Installation, Enjoy!
 
 		#INSTALL NVIDIA DRIVERS
 		sudo su

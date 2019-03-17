@@ -4,135 +4,37 @@
 
 ---------------------------------------------------------------------------------------
 
+###########################
+## Comitting Git Changes ##
+###########################
+
+
 ######################
 ## DNF APPLICATIONS ##
 ######################
 
-gparted
-vim-X11 (or gvim or vimx (compiled with clipboard))
 tmux
-gnome-tweak-tool:
-	windows, bottom-toggle minimise and maximise buttons
-	appearance, toggle dark mode
-
-nano
-iPython
+gnome-tweaks
+	- windows, bottom-toggle minimise and maximise buttons,
+		appearance, toggle dark mode
 htop
 redshift
-kodi:
-	dnf install --nogpgcheck \
-	 http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm  \
- 	 http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm	
-	sudo dnf install kodi
-
-UNetBootIn
-QBitTorrent
-VLC
-CompizConfig Settings Manager
-gcc-c++ (NEEDED FOR MANUAL GCC COMPILATION FROM SOURCE)
-python-devel
-
-####################
-##      PIP      ##
-###################
-
-virtualenv:
-	theano
-	nose
 
 ###########################
 ## SOFTWARE APPLICATIONS ##
 ###########################
 
-google-chrome (prelim programs)
-Dconf Editor
-Fedora LiveUSB Creator
-
-
-###########################
-##   DRIVERS/SEMI-MISC   ##
-###########################
-
-	## 1 ##
-		NVIDIA Drivers Info:
-		https://devtalk.nvidia.com/default/topic/981852/linux/resolution-patch-attached-for-nvidia-linux-driver-340-98-x86_64-using-linux-kernel-4-9/post/5038307/#5038307
-
-		NVIDIA Drivers Download (340.98 works for kernel 4.9.17):
-		http://www.nvidia.com/content/DriverDownload-March2009/confirmation.php?url=/XFree86/Linux-x86_64/340.98/NVIDIA-Linux-x86_64-340.98.run&lang=us&type=geforcem
-
-#https://www.if-not-true-then-false.com/2015/fedora-nvidia-guide/
-
-	## 2 ##
-		
-		sudo su		
-
-		sudo dnf install kernel-devel kernel-headers gcc dkms acpid
-
-		echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf
-	
-		nano /etc/sysconfig/grub
-		Edit /etc/sysconfig/grub:
-			append ‘rd.driver.blacklist=nouveau’ to end of ‘GRUB_CMDLINE_LINUX=”…”‘
-
-		#UPDATE GRUB2 CONF
-			## BIOS ##
-		grub2-mkconfig -o /boot/grub2/grub.cfg
-			## UEFI ## LIKELY USING THIS ##
-		grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
-	
-		#REMOVE XORG-X11-DRV-NOUVEAU
-		dnf remove xorg-x11-drv-nouveau
-
-		#GEN INITRAMFS
-			## Backup old initramfs nouveau image ##
-		mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
-			## Create new initramfs image ##
-		dracut /boot/initramfs-$(uname -r).img $(uname -r)
-
-		#REBOOT TO RUNLEVEL 3(with grub edit or following):
-		systemctl set-default multi-user.target
-
-		reboot
-
-	## 3 ##
-
-		a) Download the following NVIDIA binary/driver file from NVIDIA website for Linux: NVIDIA-Linux-x86_64-				340.98.run
-		b) Go into CLI/Terminal
-		c) Provide execution permissions: chmod 755 NVIDIA-Linux-x86_64-340.98.run
-		d) Extract: ./chmod 755 NVIDIA-Linux-x86_64-340.98.run --extract-only
-		e) Copy Patch File "nv_patch_340.98_final" into "NVIDIA-Linux-x86_64-340.98" directory
-		f) Go into (cd into) "NVIDIA-Linux-x86_64-340.98" directory where patch file is now located
-		g) Apply Patch: patch -p0 < nv_patch_340.98_final
-		h) Proceed with NVIDIA Driver Installation, Enjoy!
-
-		#INSTALL NVIDIA DRIVERS
-		sudo su
-
-		./NVIDIA-Linux-*.run
-
-			ACCEPT
-
-			YES
-		
-			YES
-
-			YES
-
-			OK
-
-		systemctl set-default graphical.target
- 
-		reboot
-
+GIMP
+	- photo editor
 
 ####################
 ##   EXTENSIONS   ##
 ####################
 
-Multi Monitors Add-On
-Removable Drive Menu
-Shutdown Timer
-Drop-Down Terminal
-Backslide
-Desktop Scroller
-Hot-Corn-Dogs (hot corners)	(not installed yet)
+#installed with 'software' package manager
+
+Multi-Monitors-Add-On
+	git clone https://github.com/spin83/multi-monitors-add-on.git
+	cd multi-monitors-add-on
+	cp -r multi-monitors-add-on@spin83 ~/.local/share/gnome-shell/extensions
+

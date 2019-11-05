@@ -4,10 +4,6 @@
 
 ---------------------------------------------------------------------------------------
 
-###########################
-## Comitting Git Changes ##
-###########################
-
 
 ######################
 ## DNF APPLICATIONS ##
@@ -19,6 +15,10 @@ gnome-tweaks
 		appearance, toggle dark mode
 htop
 redshift
+GParted
+HydraPaper
+	- allows for independent dual-monitor wallpapers
+
 
 ###########################
 ## SOFTWARE APPLICATIONS ##
@@ -26,6 +26,12 @@ redshift
 
 GIMP
 	- photo editor
+
+Atom
+	- powerful text editor
+
+Synergy
+	- mouse and keyboard sharing inter-WAN
 
 ####################
 ##   EXTENSIONS   ##
@@ -37,4 +43,6 @@ Multi-Monitors-Add-On
 	git clone https://github.com/spin83/multi-monitors-add-on.git
 	cd multi-monitors-add-on
 	cp -r multi-monitors-add-on@spin83 ~/.local/share/gnome-shell/extensions
-
+Background Logo
+Places status indicator
+Window list

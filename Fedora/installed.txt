@@ -33,6 +33,9 @@ Atom
 Synergy
 	- mouse and keyboard sharing inter-WAN
 
+ProofTools
+	- GPLI tree proof generator
+
 ####################
 ##   EXTENSIONS   ##
 ####################
